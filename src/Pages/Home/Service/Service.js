@@ -12,7 +12,7 @@ const Service = ({ service }) => {
                     <p className="card-text">Price: ${price}</p>
                     <div className='d-flex justify-content-between'>
                         <Link to="#" className="btn btn-warning ">Buy Now</Link>
-                        <Link to="#" class="card-link text-decoration-none mt-2">Read more ...</Link>
+                        <Link to="#" className="card-link text-decoration-none mt-2">Read more ...</Link>
                     </div>
 
                 </div>
