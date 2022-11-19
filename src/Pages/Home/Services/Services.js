@@ -26,7 +26,7 @@ const Services = () => {
                 ></Service>)
             }
             </div>
-            <Link className='btn btn-warning w-25 mx-auto text-center d-flex justify-content-center mb-4' to='/users'>Load more...</Link>
+            <Link className='btn btn-warning w-25 mx-auto text-center d-flex justify-content-center mb-4' to='/services'>Load more...</Link>
         </div>
     );
 };

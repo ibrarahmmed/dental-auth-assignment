@@ -17,16 +17,10 @@ const Header = () => {
                             <Nav.Link as={CustomLink} to="/home">Home</Nav.Link>
                             <Nav.Link as={CustomLink} to="/services">Services</Nav.Link>
                             <Nav.Link as={CustomLink} to="/blog">Blog</Nav.Link>
-                            <NavDropdown  title="Dropdown" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
+                            <Nav.Link as={CustomLink} to="/doctor">Doctor</Nav.Link>
+                            <NavDropdown  title="Contact" id="collasible-nav-dropdown">
+                                <NavDropdown.Item as={CustomLink} to="/home">Home</NavDropdown.Item>
+                                <NavDropdown.Item as={CustomLink} to="/contact">Contact</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                         <Nav>
