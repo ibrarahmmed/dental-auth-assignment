@@ -1,0 +1,52 @@
+[
+    {
+      "id": "1",
+      "name": "Oral & Maxillofacial Surgery",
+      "price": 498,
+      "about": "Maxillofacial surgery is a special type of dentistry. It involves operations to correct diseases, injuries and defects of your face, jaw or mouth. Maxillofacial surgeons are advanced specialists who diagnose and treat problems with: Bones and tissues of your jaw and lower face (maxillofacial area)\r\n",
+      "picture": "https://i.ibb.co/L9sFQnR/services1.png"
+    },
+    {
+      "id": "2",
+      "name": "Prosthodontics Dental Implants",
+      "price": 351,
+      "about": "Treatment used to restore one or more missing teeth. They consist of two primary parts. First, the implant itself, which is a piece of titanium that acts as an artificial tooth root once it is surgically placed.\r\n",
+      "picture": "https://i.ibb.co/jrSJkmd/services2.png"
+    },
+    {
+      "id": "3",
+      "name": "Orthodontics and The Braces",
+      "price": 482,
+      "about": "Orthodontic treatment is to make the best of your teeth. This includes straightening your teeth so you're able to care for your teeth and gums more easily, and improving your bite so you can eat more comfortably..\r\n",
+      "picture": "https://i.ibb.co/s3RJ8RP/services3.png"
+    },
+    {
+      "id": "4",
+      "name": "Endodontics",
+      "price": 396,
+      "about": "The treatmentis to make the best of your teeth branch of dentistry concerning dental pulp and tissues surrounding the roots of a tooth.\r\n",
+      "picture": "https://i.ibb.co/LQRQrr8/services4.png"
+    },
+    {
+      "id": "5",
+      "name": "Minimum Intervention Dentistry",
+      "price": 464,
+      "about": "Minimum intervention dentistry (MID) is the modern medical approach to the management of caries, utilizing caries risk assessment, and focusing on the early prevention and interception of disease.\r\n",
+      "picture": "https://i.ibb.co/cxSjV41/services5.png"
+    },
+    {
+      "id": "6",
+      "name": "Pediatric Dentistry",
+      "price": 445,
+      "about": "Pediatric dentists are dedicated to the oral health of children from infancy through the teen years. They have the experience and qualifications to care for a child’s teeth, gums, and mouth throughout the various stages of childhood.\r\n",
+      "picture": "https://i.ibb.co/4PWkDLW/services6.png"
+    },
+    {
+      "id": "7",
+      "name": "DENTAL EXPLORERS & DRILL",
+      "price": 445,
+      "about": "Dental drill or handpiece is a hand-held, mechanical instrument used to perform a variety of common dental procedures, including removing decay, polishing fillings, performing cosmetic dentistry, and altering prostheses.\r\n",
+      "picture": "https://i.ibb.co/f9s3N8H/services7.png"
+    }
+    
+  ]
