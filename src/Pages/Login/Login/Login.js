@@ -1,19 +1,42 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../../Firebase.init';
 
 const Login = () => {
-    const emailRef=useRef('');
-    const passwordRef=useRef('')
-    const navigate=useNavigate();
+    const emailRef = useRef('');
+    const passwordRef = useRef('')
+    const navigate = useNavigate();
+   
 
-    const handleSubmit=(event)=>{
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    const handleSubmit = (event) => {
         event.preventDefault();
-        const email=emailRef.current.value;
-        const password=passwordRef.current.value
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value
+
+        signInWithEmailAndPassword(email, password);
+        console.log(error.message)
     }
 
-    const navigateRegister=(event)=>{
+    
+    const location = useLocation();
+    
+
+    let from = location.state?.from?.pathname || "/";
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
+    const navigateRegister = (event) => {
         navigate('/register')
     }
 
@@ -23,7 +46,7 @@ const Login = () => {
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email"  required/>
+                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                     <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
                     </Form.Text>
@@ -37,7 +60,7 @@ const Login = () => {
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
                 <Button variant="warning" type="submit">
-                    Submit
+                    Login
                 </Button>
             </Form>
             <p>New to Dental Solutions? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>

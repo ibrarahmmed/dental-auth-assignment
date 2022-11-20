@@ -5,7 +5,7 @@ const CheckOut = () => {
     const {serviceId}=useParams();
     return (
         <div>
-            <h2>Thank You Choose Service No:{serviceId}</h2>
+            <h2>Thank You Choose Appointment No:{serviceId}</h2>
         </div>
     );
 };

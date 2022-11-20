@@ -8,6 +8,7 @@ import AllServices from './Pages/Home/AllServices/AllServices';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import RequiredAuth from './Pages/Login/RequiredAuth/RequiredAuth';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
@@ -21,7 +22,11 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/services' element={<AllServices></AllServices>}></Route>
-        <Route path='/service/:serviceId' element={<CheckOut></CheckOut>}></Route>
+        <Route path='/service/:serviceId' element={
+          <RequiredAuth>
+            <CheckOut></CheckOut>
+          </RequiredAuth>
+        }></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
