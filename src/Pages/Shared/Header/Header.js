@@ -8,9 +8,13 @@ import auth from '../../../Firebase.init';
 import logo from '../../../images/logo/logo1.png'
 
 const Header = () => {
-    const [user]=useAuthState(auth);
-    const handleSignOut=()=>{
+    const [user] = useAuthState(auth);
+    const handleSignOut = () => {
         signOut(auth);
+    }
+    let userName;
+    if (user) {
+        userName = <p >{user?.displayName}</p>
     }
     return (
         <>
@@ -25,18 +29,23 @@ const Header = () => {
                             <Nav.Link as={CustomLink} to="/services">Services</Nav.Link>
                             <Nav.Link as={CustomLink} to="/blog">Blog</Nav.Link>
                             <Nav.Link as={CustomLink} to="/doctor">Doctor</Nav.Link>
-                            <NavDropdown  title="Contact" id="collasible-nav-dropdown">
+                            <NavDropdown title="Contact" id="collasible-nav-dropdown">
                                 <NavDropdown.Item as={CustomLink} to="/home">Home</NavDropdown.Item>
                                 <NavDropdown.Item as={CustomLink} to="/contact">Contact</NavDropdown.Item>
                             </NavDropdown>
+                            <Nav.Link as={CustomLink} to="/about">About</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link as={CustomLink} to="/about">About</Nav.Link>
-                            {user? <button className='btn btn-link text-decoration-none text-black' onClick={handleSignOut}>Sign Out</button>
                             
-                            :<Nav.Link eventKey={2} as={CustomLink}  to="/login">
-                                Login
-                            </Nav.Link>}
+
+                            <span className='d-block mx-auto mt-3'>{userName}</span>
+
+
+                            {user ? <button className='btn btn-link text-decoration-none text-black' onClick={handleSignOut}>Sign Out</button>
+
+                                : <Nav.Link eventKey={2} as={CustomLink} to="/login">
+                                    Login
+                                </Nav.Link>}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
