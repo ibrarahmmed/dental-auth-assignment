@@ -5,7 +5,8 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import auth from '../../../Firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../Shared/Loading/Loading';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const [
@@ -68,11 +69,16 @@ const Register = () => {
         }
 
         console.log('Updated profile');
+        toast('Welcome');
         navigate('/home');
+       
     }
 
     const navigateLogin = () => {
+
         navigate('/login')
+        
+
     }
 
     if (loading || updating) {
@@ -118,6 +124,7 @@ const Register = () => {
             </Form>
             <p>Already have an account? <Link to='/login' className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
             <SocialLogin></SocialLogin>
+            <ToastContainer />
         </div>
     );
 };
