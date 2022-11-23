@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import { Typewriter } from 'react-simple-typewriter';
 import banner1 from '../../../images/banner/banner2.png';
 import banner2 from '../../../images/banner/banner3.png';
 import banner3 from '../../../images/banner/banner4.png';
@@ -22,8 +23,22 @@ const Banner = () => {
                    
                    
                     <Carousel.Caption>
-                        <h1 className='text-warning fs-1 mb-5'>First slide label</h1>
-                        <p  >Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h1 className='text-warning fs-1 mb-5'>
+                        <span style={{ color: 'orange', fontWeight: 'bold' }}>
+                            {/* Style will be inherited from the parent element */}
+                            <Typewriter
+                                words={['Painless Dentistry is Our Goal', 'We Care About Your Teeth', 'Make Your Dental Experience Lot Brighter', 'Pain Free Dentistry']}
+                                loop={10}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                                
+                            />
+                        </span>
+                        </h1>
+                        
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -35,8 +50,22 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h1 className='text-warning fs-1 mb-5'> Second slide label</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h1 className='text-warning fs-1 mb-5'>
+                        <span style={{ color: 'orange', fontWeight: 'bold' }}>
+                            {/* Style will be inherited from the parent element */}
+                            <Typewriter
+                                words={['Painless Dentistry is Our Goal', 'We Care About Your Teeth', 'Make Your Dental Experience Lot Brighter', 'Pain Free Dentistry']}
+                                loop={10}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                                
+                            />
+                        </span>
+                        </h1>
+                        
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -47,10 +76,22 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h1 className='text-warning fs-1 mb-5' >Third slide label</h1>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
+                        <h1 className='text-warning fs-1 mb-5' >
+                        <span style={{ color: 'orange', fontWeight: 'bold' }}>
+                            {/* Style will be inherited from the parent element */}
+                            <Typewriter
+                                words={['Painless Dentistry is Our Goal', 'We Care About Your Teeth', 'Make Your Dental Experience Lot Brighter', 'Pain Free Dentistry']}
+                                loop={10}
+                                cursor
+                                cursorStyle='_'
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                                
+                            />
+                        </span>
+                        </h1>
+                        
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
